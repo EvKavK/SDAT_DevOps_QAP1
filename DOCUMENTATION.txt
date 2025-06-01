@@ -1,0 +1,62 @@
+Game Store System - QAP Documentation
+
+1. Project Overview
+
+This is just a simple CLI-based game store program. Users can add games to a cart, remove games, view the total cart value, and make purchases!
+
+2. Test Cases
+
+- testAddGameToCart():
+  Tests adding a game to the cart, checks cart size and total price.
+- testRemoveGameFromCart():
+  Tests removing a game from the cart and checks if the cart is empty afterward.
+- testPurchaseEmptyCart():
+  Tests purchasing an empty cart returns the correct "Cart is empty." message.
+- testSuccessfulPurchase():
+  Tests a successful purchase message when cart contains games.
+
+  A screenshot of these test cases working as intended can be found in the screenshots folder in the repository.
+
+3. Clean Code Practices
+
+- Descriptive Naming:
+  The methods and variables use clear, self-explanatory names, such as getTotal(), addGame(), and purchase(), thus making sure there's absolutely no confusion on what the purpose of each method or variable is.
+- Single Responsibility Principle:
+  Classes have focused, single responsibilities, and are not cluttered with multiple responsibilities. For example, Store handles purchase logic, Cart manages game collections, and Game stores game details.
+- Encapsulation:
+  The Cart class keeps its game list private and provides public methods to access or modify it, protecting internal data.
+
+  Examples of all of the following can be shown in the screenshots folder in the repository.
+
+4. Dependencies
+
+This project uses the following dependencies:
+- Java (v24): Used to run the program.
+- JUnit 5 (v5.10.0): Used to write and run unit tests.
+- Maven Surefire Plugin (v3.1.2): Used to execute unit tests during the Maven build lifecycle.
+
+5. GitHub Actions Setup
+
+There is a workflow configured to run unit tests automatically on every Pull Request to the main branch. The workflow uses:
+- Ubuntu latest runner
+- Java 24 via actions/setup-java
+- Maven commands: clean install and test
+
+This ensures CI verifies code correctness on every change.
+
+6. Problems Faced
+
+I mainly had problems figuring my way around using Github Actions for testing, since it wasn't something I was fully familiar with. Once I figured it out, however, it was smooth sailing from there.
+
+7. Running the Application
+
+A Main.java file was added for functionality purposes. It demonstrates adding games to the cart, showing cart contents and total, and then performing a purchase.
+
+Expected output:
+Games in cart:
+- Minecraft ($24.99)
+- Super Mario Odyssey ($79.99)
+Total price: $104.98
+Purchase successful. Total: $104.98
+
+A screenshot of this in action can be seen in the screenshots folder in the repository.
