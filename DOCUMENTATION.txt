@@ -2,7 +2,7 @@ Game Store System - QAP Documentation
 
 1. Project Overview
 
-This is just a simple CLI-based game store program. Users can add games to a cart, remove games, view the total cart value, and make purchases!
+This is just a simple CLI-based game store program. Users can add games to a cart, remove games, view the total cart value, and make purchases.
 
 2. Test Cases
 
